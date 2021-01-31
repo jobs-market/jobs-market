@@ -45,16 +45,18 @@ const submitHandler = (e) => {
         ...body
     });
 
-    // document.querySelector('#Fname').value = null;
-    // document.querySelector('#Lname').value = null;
-    // document.querySelector('#address').value = null;
-    // document.querySelector('#male').checked;
-    // document.querySelector('#state').value = null;
-    // document.querySelector('#city').value = null;
-    // document.querySelector('#pincode').value = null;
-    // document.querySelector('#phone').value = null;
-    // document.querySelector('#email').value = null;
-    // document.querySelector('#resumeLink').value = null;
+    alert("Response submitted succesfully!");
+
+    document.querySelector('#Fname').value = null;
+    document.querySelector('#Lname').value = null;
+    document.querySelector('#address').value = null;
+    document.querySelector('#male').checked;
+    document.querySelector('#state').value = null;
+    document.querySelector('#city').value = null;
+    document.querySelector('#pincode').value = null;
+    document.querySelector('#phone').value = null;
+    document.querySelector('#email').value = null;
+    document.querySelector('#resumeLink').value = null;
 }
 
 document.querySelector('#submitButton').addEventListener('click', submitHandler);
