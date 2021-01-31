@@ -37,15 +37,202 @@
         body { border-top: 16px solid #ffa100; }
       }
     </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&family=Yusei+Magic&display=swap"
+      rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" media="screen and (max-width:900px)" href="phone.css" />
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome BROOOOOOOOOO</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <nav id="navbar">
+      <div id="logo">
+        <img src="logo.png" alt="jobsmarketindia.com" />
+      </div>
+      <ul>
+        <li class="item"><a href="#">Home</a></li>
+        <li class="item"><a href="#">Services</a></li>
+        <li class="item"><a href="#aboutSecion">About Us</a></li>
+        <li class="item"><a href="#footerSection">Contact Us</a></li>
+      </ul>
+    </nav>
+    <section id="home">
+      <h1 class="h-primary">Welcome to Jobs Market India</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+        reprehenderit eum deserunt saepe sapiente, animi excepturi et natus
+        culpa esse sint praesentium blanditiis maxime debitis dolores nostrum,
+        ullam nulla molestias aut, cum fugit. Omnis.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectenostrum, ullam nulla molestias aut,
+        cum fugit. Omnis.
+      </p>
+  
+      <button class="btn" onclick="document.getElementById('mainformid').scrollIntoView();">Getting Hired</button>
+    </section>
+  
+  
+    <section class="form-container" id="formSection">
+      <h1 class="center" id="formSectionHeading">Getting Hired</h1>
+  
+      <div class="formBox" id="formBoxid">
+        <div class="mainform" id="mainformid">
+          <div class="side-bg-form">
+            <h1 id="side-bg-form-text">Jobs Market India !!</h1>
+          </div>
+          <div class="mainContent-form">
+            <h1 id="form-id-heading">Register yourself for Free !!</h1>
+            <form class="mainFormContent" action="#">
+              <div class="form-name">
+                <label for="name">First Name : </label>
+                <input type="text" name="Fname" id="Fname" required />
+                <br>
+                <br>
+                <label for="L_name">Last Name : </label>
+                <input type="text" name="Lname" id="Lname" required />
+              </div>
+  
+              <div class="form-address">
+                <label for="address">Address : </label>
+                <textarea name="address" id="address" cols="60" rows="1" onfocus="this.value=''; this.onfocus=null"
+                  required> This is My Address</textarea>
+              </div>
+              <div class="form-gender">
+                <label for="gender">Gender : </label>
+                &nbsp;&nbsp;&nbsp;
+                <span>
+                  Male <input type="radio" name="male" id="male" required />
+                  &nbsp;&nbsp;&nbsp; 
+                  Female <input type="radio" name="male" id="female" required />
+                </span>
+              </div>
+  
+              <div class="form-state">
+                  <label for="state">State : </label>
+  
+                  <select name="state" id="state" required>
+                    <option value=""></option>
+                    <option value="punjab">Punjab</option>
+                    <option value="haryana">Haryana</option>
+                    <option value="himachal Pradesh">Himachal Pradesh</option>
+                    <option value="chandigarh">Chandigarh</option>
+                    <option value="delhi">Delhi</option>
+                    <!-- <option value="Chandigarh">Chandigarh</option> -->
+                  </select>
+              </div>
+  
+              <div class="form-city">
+                  <label for="state">City :</label>
+  
+                  <select name="city" id="city" required>
+                    <option value=""></option>
+                    <option value="jalandhar">Jalandhar</option>
+                    <option value="Amritsar">Amritsar</option>
+                    <option value="Ludhiana">Ludhiana</option>
+                    <option value="Moga">Moga</option>
+                    <option value="Patiala">Patiala</option>
+                    <option value="Ferozpur">Ferozpur</option>
+                    <option value="Bhatinda">Bhatinda</option>
+                  </select>
+              </div>
+  
+              <div class="form-pincode">
+  
+                  <label for="pincode">Pincode :</label>
+                  <input type="number" name="pincode" id="pincode" required />
+  
+              </div>
+  
+              <div class="form-phone">
+  
+                  <label for="phone">WhatsApp No. :</label>
+                  <input type="tel" name="phone" id="phone" required />
+  
+              </div>
+  
+              <div class="form-email">
+  
+                  <label for="pincode">Email Id :</label>
+                  <input type="email" name="email" id="email" required />
+  
+              </div>
+  
+              <div class="form-uploadCV">
+  
+                  <label for="file">Resume Link :</label>
+                  <input type="resumeLink" name="resumeLink" id="resumeLink" required />
+                  <!-- <input type="file" name="resume_pdf" id="resume_pdf" required /> -->
+  
+              </div>
+  
+              <div class="form-submit">
+  
+                  <span class="registerBtn">
+                      <input type="submit" value="Register Me" class="submit" name="submit" id="submitButton" />
+                  </span>
+  
+              </div>
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <section class="Aboutus-container" id="aboutSecion">
+      <h1 class="center" id="aboutHeading">About Us</h1>
+      <div id="about">
+        <div class="box">
+          <!-- <img src="#" alt="services image"> -->
+          <h2 class="h-secendory center">Our Story</h2>
+          <p class="center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            vel. Accusantium, dolore quam saepe ipsum veritatis corrupti
+            voluptas odit ducimus architecto nostrum dolor consequuntur atque
+            iure, expedita voluptatum deserunt quasi delectus. Sapiente, nisi
+            eos.
+          </p>
+        </div>
+        <div class="box">
+          <!-- <img src="#" alt="services image"> -->
+          <h2 class="h-secendory center">Our History</h2>
+          <p class="center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            vel. Accusantium, dolore quam saepe ipsum veritatis corrupti
+            voluptas odit ducimus architecto nostrum dolor consequuntur atque
+            iure, expedita voluptatum deserunt quasi delectus. Sapiente, nisi
+            eos.
+          </p>
+        </div>
+        <div class="box">
+          <!-- <img src="#" alt="services image"> -->
+          <h2 class="h-secendory center">Our Clients</h2>
+          <p class="center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
+            vel. Accusantium, dolore quam saepe ipsum veritatis corrupti
+            voluptas odit ducimus architecto nostrum dolor consequuntur atque
+            iure, expedita voluptatum deserunt quasi delectus. Sapiente, nisi
+            eos.
+          </p>
+        </div>
+      </div>
+    </section>
+    <hr />
+    <footer class="footer" id="footerSection">
+      <h3>
+        Copyright &copy; 2021 ,&nbsp;&nbsp;All Right Reserved by Jobs Market
+        India
+      </h3>
+    </footer>
 
     <script>
       document.addEventListener('DOMContentLoaded', function() {
