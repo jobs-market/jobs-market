@@ -12,6 +12,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var database = firebase.database();
 
+var url = "";
+
 const submitHandler = (e) => {
     e.preventDefault();
 
@@ -24,7 +26,6 @@ const submitHandler = (e) => {
     const pincode = document.querySelector('#pincode').value;
     const mobile = document.querySelector('#phone').value;
     const email = document.querySelector('#email').value;
-    const resumeLink = document.querySelector('#resumeLink').value;
     
     const body = {
         firstName,
@@ -36,7 +37,7 @@ const submitHandler = (e) => {
         pincode,
         mobile,
         email,
-        resumeLink,
+        resumeLink: url,
     };
 
     const id = `${firstName}-${lastName}-${Date.now()}`;
@@ -56,8 +57,21 @@ const submitHandler = (e) => {
     document.querySelector('#pincode').value = null;
     document.querySelector('#phone').value = null;
     document.querySelector('#email').value = null;
-    document.querySelector('#resumeLink').value = null;
 }
 
+const resumeUploadHandler = (e) => {
+    var storageRef = firebase.storage().ref();
+    var path = `resumes/${Math.random().toString(36)}`;
+    const file = document.querySelector('#resume_pdf').files[0];
+
+    document.querySelector("body").className = "loading";
+
+    storageRef.child(path).put(file).then(async (snapshot) => {
+        url = await snapshot.ref.getDownloadURL();
+        document.querySelector("body").className = "";
+    });
+}
+
+document.querySelector('#resume_pdf').addEventListener('change', resumeUploadHandler);
 document.querySelector('#submitButton').addEventListener('click', submitHandler);
 

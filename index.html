@@ -21,6 +21,7 @@
 
       <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
       <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-storage.js"></script>
   </head>
   <body>
     <nav id="navbar">
@@ -138,9 +139,9 @@
   
               <div class="form-uploadCV">
   
-                  <label for="file">Resume Link :</label>
-                  <input type="resumeLink" name="resumeLink" id="resumeLink" required />
-                  <!-- <input type="file" name="resume_pdf" id="resume_pdf" required /> -->
+                  <label for="file">Resume upload :</label>
+                  <!-- <input type="resumeLink" name="resumeLink" id="resumeLink" required /> -->
+                  <input type="file" name="resume_pdf" id="resume_pdf" required />
   
               </div>
   
@@ -203,6 +204,8 @@
         India
       </h3>
     </footer>
+    
+    <div class="modal"></div>
 
     <script src="./app.js"></script>
   </body>
