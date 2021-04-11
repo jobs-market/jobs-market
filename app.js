@@ -98,7 +98,7 @@ var firebaseConfig = {
   messagingSenderId: "237567515196",
   appId: "1:237567515196:web:59cf6d0c6308ab8940c139",
   measurementId: "G-86FTLT7WLL",
-  databaseUrl: "https://jobsmarketindia-7f1e5-default-rtdb.firebaseio.com/",
+  databaseUrl: "https://jobsmarketindia-7f1e5-default-rtdb.firebaseio.com/"
   
                 
 };
@@ -132,7 +132,7 @@ const submitHandler = (e) => {
       pincode,
       mobile,
       email,
-      resumeLink: url,
+      resumelink: url,
   };
   const companybody ={
       city,pincode
