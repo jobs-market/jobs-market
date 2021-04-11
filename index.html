@@ -1,212 +1,863 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Jobs Market India</title>
-
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" />
-      <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet" />
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.gstatic.com">
-      <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&family=Yusei+Magic&display=swap"
-        rel="stylesheet">
-
-
-      <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet" />
-      <link rel="stylesheet" href="style.css" />
-      <link rel="stylesheet" media="screen and (max-width:900px)" href="phone.css" />
-
-      <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-storage.js"></script>
-  </head>
-  <body>
-    <nav id="navbar">
-      <div id="logo">
-        <img src="logo.png" alt="jobsmarketindia.com" />
-      </div>
-      <ul>
-        <li class="item"><a href="#">Home</a></li>
-        <li class="item"><a href="#">Services</a></li>
-        <li class="item"><a href="#aboutSecion">About Us</a></li>
-        <li class="item"><a href="#footerSection">Contact Us</a></li>
-      </ul>
-    </nav>
-    <section id="home">
-      <h1 class="h-primary">Welcome to Jobs Market India</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
-        reprehenderit eum deserunt saepe sapiente, animi excepturi et natus
-        culpa esse sint praesentium blanditiis maxime debitis dolores nostrum,
-        ullam nulla molestias aut, cum fugit. Omnis.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectenostrum, ullam nulla molestias aut,
-        cum fugit. Omnis.
-      </p>
-  
-      <button class="btn" onclick="document.getElementById('mainformid').scrollIntoView();">Getting Hired</button>
-    </section>
-  
-  
-    <section class="form-container" id="formSection">
-      <h1 class="center" id="formSectionHeading">Getting Hired</h1>
-  
-      <div class="formBox" id="formBoxid">
-        <div class="mainform" id="mainformid">
-          <div class="side-bg-form">
-            <h1 id="side-bg-form-text">Jobs Market India !!</h1>
-          </div>
-          <div class="mainContent-form">
-            <h1 id="form-id-heading">Register yourself for Free !!</h1>
-            <form class="mainFormContent" action="#">
-              <div class="form-name">
-                <label for="name">First Name : </label>
-                <input type="text" name="Fname" id="Fname" required />
-                <br>
-                <br>
-                <label for="L_name">Last Name : </label>
-                <input type="text" name="Lname" id="Lname" required />
-              </div>
-  
-              <div class="form-address">
-                <label for="address">Address : </label>
-                <textarea name="address" id="address" cols="60" rows="1" onfocus="this.value=''; this.onfocus=null"
-                  required> This is My Address</textarea>
-              </div>
-              <div class="form-gender">
-                <label for="gender">Gender : </label>
-                &nbsp;&nbsp;&nbsp;
-                <span>
-                  Male <input type="radio" name="male" id="male" required />
-                  &nbsp;&nbsp;&nbsp; 
-                  Female <input type="radio" name="male" id="female" required />
-                </span>
-              </div>
-  
-              <div class="form-state">
-                  <label for="state">State : </label>
-  
-                  <select name="state" id="state" required>
-                    <option value=""></option>
-                    <option value="punjab">Punjab</option>
-                    <option value="haryana">Haryana</option>
-                    <option value="himachal Pradesh">Himachal Pradesh</option>
-                    <option value="chandigarh">Chandigarh</option>
-                    <option value="delhi">Delhi</option>
-                    <!-- <option value="Chandigarh">Chandigarh</option> -->
-                  </select>
-              </div>
-  
-              <div class="form-city">
-                  <label for="state">City :</label>
-  
-                  <select name="city" id="city" required>
-                    <option value=""></option>
-                    <option value="jalandhar">Jalandhar</option>
-                    <option value="Amritsar">Amritsar</option>
-                    <option value="Ludhiana">Ludhiana</option>
-                    <option value="Moga">Moga</option>
-                    <option value="Patiala">Patiala</option>
-                    <option value="Ferozpur">Ferozpur</option>
-                    <option value="Bhatinda">Bhatinda</option>
-                  </select>
-              </div>
-  
-              <div class="form-pincode">
-  
-                  <label for="pincode">Pincode :</label>
-                  <input type="number" name="pincode" id="pincode" required />
-  
-              </div>
-  
-              <div class="form-phone">
-  
-                  <label for="phone">WhatsApp No. :</label>
-                  <input type="tel" name="phone" id="phone" required />
-  
-              </div>
-  
-              <div class="form-email">
-  
-                  <label for="pincode">Email Id :</label>
-                  <input type="email" name="email" id="email" required />
-  
-              </div>
-  
-              <div class="form-uploadCV">
-  
-                  <label for="file">Resume upload :</label>
-                  <!-- <input type="resumeLink" name="resumeLink" id="resumeLink" required /> -->
-                  <input type="file" name="resume_pdf" id="resume_pdf" required />
-  
-              </div>
-  
-              <div class="form-submit">
-  
-                  <span class="registerBtn">
-                      <input type="submit" value="Register Me" class="submit" name="submit" id="submitButton" />
-                  </span>
-  
-              </div>
-  
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr />
-    <section class="Aboutus-container" id="aboutSecion">
-      <h1 class="center" id="aboutHeading">About Us</h1>
-      <div id="about">
-        <div class="box">
-          <!-- <img src="#" alt="services image"> -->
-          <h2 class="h-secendory center">Our Story</h2>
-          <p class="center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-            vel. Accusantium, dolore quam saepe ipsum veritatis corrupti
-            voluptas odit ducimus architecto nostrum dolor consequuntur atque
-            iure, expedita voluptatum deserunt quasi delectus. Sapiente, nisi
-            eos.
-          </p>
-        </div>
-        <div class="box">
-          <!-- <img src="#" alt="services image"> -->
-          <h2 class="h-secendory center">Our History</h2>
-          <p class="center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-            vel. Accusantium, dolore quam saepe ipsum veritatis corrupti
-            voluptas odit ducimus architecto nostrum dolor consequuntur atque
-            iure, expedita voluptatum deserunt quasi delectus. Sapiente, nisi
-            eos.
-          </p>
-        </div>
-        <div class="box">
-          <!-- <img src="#" alt="services image"> -->
-          <h2 class="h-secendory center">Our Clients</h2>
-          <p class="center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis,
-            vel. Accusantium, dolore quam saepe ipsum veritatis corrupti
-            voluptas odit ducimus architecto nostrum dolor consequuntur atque
-            iure, expedita voluptatum deserunt quasi delectus. Sapiente, nisi
-            eos.
-          </p>
-        </div>
-      </div>
-    </section>
-    <hr />
-    <footer class="footer" id="footerSection">
-      <h3>
-        Copyright &copy; 2021 ,&nbsp;&nbsp;All Right Reserved by Jobs Market
-        India
-      </h3>
-    </footer>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     
-   <!-- <div class="modal"></div> -->
+<!-- 
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>  -->
 
-    <script src="./app.js"></script>
-  </body>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-storage.js"></script>
+    
+    <link rel="stylesheet" href="trystyle.css">
+    
+
+    <title>Jobs Market India</title>
+</head>
+<body>
+
+    <!-- Landing Page Starts -->
+    <!-- Landing Page Starts -->
+    <div class="animation-area" id="home">
+		<ul class="box-area">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+        <header class="topbar" >
+            <div class="container flex justify-between">
+                <div class="icons">
+                    <a href="#" ><i class="fab fa-facebook"></i></a>
+                    <a href="#" ><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=919041922995&forceIntent=true&load=loadInIOSExternalSafari" target="_blank" ><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <div class="heading-topbar">
+                    <h3>Jobs Market India</h3>
+                </div>
+                <div class="emp-topbar">
+                    <a href="#postjob"><i class="fas fa-user-alt"></i>Employers, Post a Job, It's FREE! </a>
+                </div>
+            </div>
+        </header>
+
+        <nav>
+            <div class="top">
+                <div class="container flex align-center justify-between">
+                    <div class="contact flex align-center">
+                        <a href="tel:+917888665915" target="_blank" >
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                        <div>
+                            <h5 >Call US: (+91) 78886 65915</h5>
+                            <h6>E-mail : jobsmarket@gmail.com</h6>
+                        </div>
+                    </div>
+                    <div class="branding">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="time flex align-center">
+                        <a><i class="far fa-clock"></i></a>
+                        <div>
+                            <h5>Working Hours:</h5>
+                            <h6>Mon - Sat (8.00am - 10.00pm)</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar">
+                <div class="container flex justify-between">
+                    <a href="#" class="active">Home</a>
+                    <a href="#aboutus">About Us</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#services">Services</a>
+                    <a href="#contactus">Contact Us</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="hero">
+            <div class="container flex direction-col ">
+                <div class="welcome flex align-center direction-col">
+                    <div>
+                        <h1>Welcome To Jobs Market India</h1>
+                    </div>
+                    <div>
+                        <h3>Your Dream Job Provider</h3>
+                    </div>
+                    <!-- <div>
+                        <h6>Worlds Largest Job Provider</h6>
+                    </div> -->
+                </div>
+                <div class="welcome-buttons flex align-center justify-center">
+                    <div class="candidate text-center flex direction-col align-center justify-center">
+                        <h4>I am Candidate</h4>
+                        <button class="btn anim-btn hero-btn-shadow"><a href="#registerme">Get Job Now</a></button>
+                    </div>
+                    <div class="employer flex direction-col align-center justify-center">
+                        <h4>I am Employer</h4>
+                        <button class="btn anim-btn hero-btn-shadow"><a href="#postjob">Hire Now</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>    
+   <!-- Landing Page Ends -->
+    <!-- Landing Page Ends -->
+
+
+    <section class="creating-impact">
+        <div class="container text-center">
+            <h1 class="section-impact-heading">Creating Impact</h1>
+            <div class="timer flex justify-between align-center">
+                <div class="time flex align-center text-center direction-col">
+                    <span>15 +</span>
+                    <span>Years</span>
+                </div>
+                <div class="divider"></div>
+                <div class="time flex align-center text-center direction-col">
+                    <span>16 k</span>
+                    <span>Careers made</span>
+                </div>
+                <div class="divider"></div>
+                <div class="time flex align-center text-center direction-col">
+                    <span>50 +</span>
+                    <span>Consultants</span>
+                </div>
+                <div class="divider"></div>
+                <div class="time flex align-center text-center direction-col">
+                    <span>25</span>
+                    <span>Industries covered</span>
+                </div>
+            </div>
+        </div>
+    </section>
+ 
+    <section class="how-work-sec" id="aboutus">
+        <div class="container flex align-center direction-col">
+            <h1>- How We Work -</h1>
+            <div class="margin-ok flex align-center justify-between">
+                <div class="work flex align-center direction-col ">
+                    <div>
+                        <img src="images/step1.png" alt="">
+                    </div>
+                    <div class="work-heading">
+                        <h4>post your job</h4>
+                    </div>
+                    <div class="work-para text-center">
+                        Fill a simple form to tell us your requirements.
+                    </div>
+                </div>
+                <div class="work flex align-center direction-col">
+                    <div>
+                        <img src="images/step2.png" alt="">
+                    </div>
+                    <div class="work-heading text-center">
+                        <h4>WE ADVERTISE YOUR JOB</h4>
+                    </div>
+                    <div class="work-para text-center">
+                        We publish your job to candidates on WorkIndia App that match your profile.
+                    </div>
+                </div>
+                <div class="work flex align-center direction-col">
+                    <div>
+                        <img src="images/step3.png" alt="">
+                    </div>
+                    <div class="work-heading text-center">
+                        <h4>CANDIDATES CALL YOU</h4>
+                    </div>
+                    <div class="work-para text-center">
+                        Active job seekers who are interested in your job call you on your phone for interview.
+                    </div>
+                </div>
+                <div class="work flex align-center direction-col">
+                    <div>
+                        <img src="images/step4.png" alt="">
+                    </div>
+                    <div class="work-heading text-center">
+                        <h4>TAKE INTERVIEW & HIRE</h4>
+                    </div>
+                    <div class="work-para text-center">
+                        From the calls you get, invite relevant people for interview & hire the best ones.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="job-categories" id="services">
+        <div class="container flex align-center justify-center direction-col">
+            <h1>- Job Categories -</h1>
+            <div class="job-container flex align-center bottom-margin">
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-money-check-alt"></i></a>
+                    <h4>Banking Sector</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-university"></i></i></a>
+                    <h4>Insurance Sector</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-file-invoice-dollar"></i></a>
+                    <h4>Accountant Jobs</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-search-dollar"></i></a>
+                    <h4>Marketting Job</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-laptop-house"></i></a>
+                    <h4>Front/Back Office</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="far fa-building"></i></a>
+                    <h4>HR Department</h4>
+                </div>
+            </div>
+            <div class="job-container flex align-center">
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-tty"></i></a>
+                    <h4>Telecom Sector</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-laptop-code"></i></a>
+                    <h4>Computer Operator</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-users-cog"></i></a>
+                    <h4>Admin Department</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-notes-medical"></i></a>
+                    <h4>Pharma Sector</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-american-sign-language-interpreting"></i></a>
+                    <h4>Recovery Field</h4>
+                </div>
+                <div class="job-name flex align-center direction-col justify-center">
+                    <a href="#"><i class="fas fa-marker"></i></a>
+                    <h4>Graphic Designer</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="helps-to-find">
+        <div class="container flex  align-center justify-between ">
+            <div class="person-img flex-1 ">
+                <img src="./images/Group 7.png" alt="">
+            </div>
+            <div class="job-help-heading text-center flex-1">
+                <h1>Jobs Market India</h1>
+                <h2>Helps you to Find</h2>
+                <h2>Best Job</h2>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="hire-me" id="registerme">
+        <div class="container flex justify-center align-center">
+            
+            <div class="form-container flex align-center justify-center direction-col">
+                <h1 class="form-heading text-center ">~ ~ Register Your Self For Free  ~</h1>
+                <form class="main-form-content  " action="#">
+                    <div class="form-name ">
+                      <div class="first-name ">
+                        <label for="name">First Name : </label>
+                        <input type="text" name="Fname" id="Fname" required />
+                      </div>
+                      <hr class="form-divider">
+                      <div class="last-name ">
+                        <label for="L_name">Last Name : </label>
+                        <input type="text" name="Lname" id="Lname" required />
+                      </div>
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-address  ">
+                      <label for="address">Address : </label>
+                      <textarea name="address" id="address" cols="30" rows="2" onfocus="this.value=''; this.onfocus=null"
+                        required> This is My Address</textarea>
+                    </div>
+                    <hr class="form-divider">
+                    <div class="form-gender ">
+                      <label for="gender">Gender : </label>
+                      &nbsp;&nbsp;&nbsp;
+                      <span>
+                        Male <input type="radio" name="male" id="male" required />
+                        &nbsp;&nbsp;&nbsp; 
+                        Female <input type="radio" name="male" id="female" required />
+                      </span>
+                    </div>
+                    <hr class="form-divider">
+                    
+                    <div class="form-state">
+                        <label for="state">State : </label>
+        
+                        <select name="state" id="state" required>
+                          <option value=""></option>
+                          <option value="punjab">Punjab</option>
+                          <option value="haryana">Haryana</option>
+                          <option value="himachal Pradesh">Himachal Pradesh</option>
+                          <option value="chandigarh">Chandigarh</option>
+                          <option value="delhi">Delhi</option>
+                          <!-- <option value="Chandigarh">Chandigarh</option> -->
+                        </select>
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-city">
+                        <label for="state">City :</label>
+        
+                        <select name="city" id="city" required>
+                          <option value=""></option>
+                          <option value="jalandhar">Jalandhar</option>
+                          <option value="Amritsar">Amritsar</option>
+                          <option value="Ludhiana">Ludhiana</option>
+                          <option value="Moga">Moga</option>
+                          <option value="Patiala">Patiala</option>
+                          <option value="Ferozpur">Ferozpur</option>
+                          <option value="Bhatinda">Bhatinda</option>
+                        </select>
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-pincode">
+        
+                        <label for="pincode">Pincode :</label>
+                        <input type="number" name="pincode" id="pincode" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-phone">
+        
+                        <label for="phone">WhatsApp No. :</label>
+                        <input type="tel" name="phone" id="phone" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-email">
+        
+                        <label for="pincode">Email Id :</label>
+                        <input type="email" name="email" id="email" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-upload-cv">
+        
+                        <label for="file">Resume upload :</label>
+                        <!-- <input type="resumeLink" name="resumeLink" id="resumeLink" required /> -->
+                        <input type="file" name="resume_pdf" id="resume_pdf" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    
+        
+                </form>
+
+                <div class="form-submit ">
+                    <span class="registerBtn">
+                        <input type="submit" value="Register Me" class="submit" name="submit" id="submitButton" />
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="review-section " id="blog">
+        <h1 class=" review-heading text-center">- See what people are saying -</h1>
+        <div class="container   review-container">
+            <div class="slider ">
+                <button class="slider-btn prev-btn"><i class="fas fa-arrow-circle-left"></i></button>
+                <button class="slider-btn next-btn"><i class="fas fa-arrow-circle-right"></i></button>
+                <div class="card-slider">
+                    <div class="review-card flex align-center direction-col ">
+                        <div class="hang-img flex justify-between ">
+                            <img src="./images/Group 8.png" alt="">
+                        </div>
+                        <div class="review-person-img">
+                            <a href="###"><i class="fas fa-user"></i></a>
+                        </div>
+                        <div class="review-stars flex justify-between align-center">
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star-half-alt"></i></a>
+                            <a href="#"><i class="far fa-star"></i></a>
+                        </div>
+                        <div class="review-name flex align-center justify-between">
+                            <h4>Anuj Verma </h4>
+                            <a href="#"><i class="fas fa-award"></i></a>
+                        </div>
+                        <div class="review-para text-center">
+                            <p>I had an incredible experience with Placement’ Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cupiditate.</p>
+                        </div>
+                    </div>
+                    <div class="review-card flex align-center direction-col ">
+                        <div class="hang-img flex justify-between ">
+                            <img src="./images/Group 8.png" alt="">
+                        </div>
+                        <div class="review-person-img">
+                            <a href="###"><i class="fas fa-user"></i></a>
+                        </div>
+                        <div class="review-stars flex justify-between align-center">
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star-half-alt"></i></a>
+                        </div>
+                        <div class="review-name flex align-center justify-between">
+                            <h4>Manik Asija </h4>
+                            <a href="#"><i class="fas fa-award"></i></a>
+                        </div>
+                        <div class="review-para text-center">
+                            <p>I am literally making just shy of DOUBLE my highest salary. I couldn't have done any of it without Placement</p>
+                        </div>
+                    </div>
+                    <div class="review-card flex align-center direction-col ">
+                        <div class="hang-img flex justify-between ">
+                            <img src="./images/Group 8.png" alt="">
+                        </div>
+                        <div class="review-person-img">
+                            <a href="###"><i class="fas fa-user"></i></a>
+                        </div>
+                        <div class="review-stars flex justify-between align-center">
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                        </div>
+                        <div class="review-name flex align-center justify-between">
+                            <h4>Harsjit Singh </h4>
+                            <a href="#"><i class="fas fa-award"></i></a>
+                        </div>
+                        <div class="review-para text-center">
+                            <p>I cannot say enough good things. You truly have a team behind you every step of the way, and MAN what a difference it makes.</p>
+                        </div>
+                    </div>
+                    <div class="review-card flex align-center direction-col ">
+                        <div class="hang-img flex justify-between ">
+                            <img src="./images/Group 8.png" alt="">
+                        </div>
+                        <div class="review-person-img">
+                            <a href="###"><i class="fas fa-user"></i></a>
+                        </div>
+                        <div class="review-stars flex justify-between align-center">
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="far fa-star"></i></a>
+                            <a href="#"><i class="far fa-star"></i></a>
+                        </div>
+                        <div class="review-name flex align-center justify-between">
+                            <h4>Karan kumar </h4>
+                            <a href="#"><i class="fas fa-award"></i></a>
+                        </div>
+                        <div class="review-para text-center">
+                            <p>I've had my fair share of job search experiences and this is BY FAR the best one yet.</p>
+                        </div>
+                    </div>
+                    <div class="review-card flex align-center direction-col ">
+                        <div class="hang-img flex justify-between ">
+                            <img src="./images/Group 8.png" alt="">
+                        </div>
+                        <div class="review-person-img">
+                            <a href="###"><i class="fas fa-user"></i></a>
+                        </div>
+                        <div class="review-stars flex justify-between align-center">
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star-half-alt"></i></a>
+                            <a href="#"><i class="far fa-star"></i></a>
+                        </div>
+                        <div class="review-name flex align-center justify-between">
+                            <h4>Amit sharma </h4>
+                            <a href="#"><i class="fas fa-award"></i></a>
+                        </div>
+                        <div class="review-para text-center">
+                            <p> I hadn't realized how much more I could improve my interview skills, CV, Linkedin etc. but Placement went above and beyond my expectations.</p>
+                        </div>
+                    </div>
+                    <div class="review-card flex align-center direction-col ">
+                        <div class="hang-img flex justify-between ">
+                            <img src="./images/Group 8.png" alt="">
+                        </div>
+                        <div class="review-person-img">
+                            <a href="###"><i class="fas fa-user"></i></a>
+                        </div>
+                        <div class="review-stars flex justify-between align-center">
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star"></i></a>
+                            <a href="#"><i class="fas fa-star-half-alt"></i></a>
+                            <a href="#"><i class="far fa-star"></i></a>
+                        </div>
+                        <div class="review-name flex align-center justify-between">
+                            <h4>Muskan</h4>
+                            <a href="#"><i class="fas fa-award"></i></a>
+                        </div>
+                        <div class="review-para text-center">
+                            <p>I had an incredible experience with Placement’ Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cupiditate.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="company-hire-me" id="postjob">
+        <div class="container flex justify-center align-center">
+            
+            <div class="form-container flex align-center justify-center direction-col">
+                <h1 class="form-heading text-center ">~ ~Post A Job For Free  ~</h1>
+                <form class="main-form-content  " action="#">
+                    <div class="form-name ">
+                      <div class="first-name ">
+                        <label for="name">Company Name : </label>
+                        <input type="text" name="Fname" id="CompanyName" required />
+                      </div>
+                      <hr class="form-divider">
+                      <div class="last-name ">
+                        <label for="L_name">Job Title : </label>
+                        <input type="text" name="Lname" id="Title" required />
+                      </div>
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-address  ">
+                      <label for="address">Job Description : </label>
+                      <textarea name="address" id="JobDescription" cols="30" rows="5" onfocus="this.value=''; this.onfocus=null"
+                        required> Pls Write in Deep</textarea>
+                    </div>
+                    <hr class="form-divider">
+                    <div class="form-address  ">
+                      <label for="address">Min Qualification : </label>
+                      <textarea name="address" id="MinQualification" cols="30" rows="2" onfocus="this.value=''; this.onfocus=null"
+                        required> Minimum Qualification </textarea>
+                    </div>
+                    <hr class="form-divider">
+                    <div class="form-address  ">
+                      <label for="address">Location : </label>
+                      <textarea name="address" id="Location" cols="30" rows="2" onfocus="this.value=''; this.onfocus=null"
+                        required> Location to Work</textarea>
+                    </div>
+                    <hr class="form-divider">
+                    <div class="form-gender ">
+                      <label for="gender">Employment Type : </label>
+                      &nbsp;&nbsp;&nbsp;
+                      <span>
+                        Full Time <input type="radio" name="full" id="Full" required />
+                        &nbsp;&nbsp;&nbsp; 
+                        Part Time <input type="radio" name="part" id="Part" required />
+                      </span>
+                    </div>
+                    <hr class="form-divider">
+                    
+                    
+        
+                    <div class="form-pincode">
+        
+                        <label for="pincode">Pincode :</label>
+                        <input type="number" name="pincode" id="CompanyPincode" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-phone">
+        
+                        <label for="phone">Contact No. :</label>
+                        <input type="tel" name="phone" id="CompanyPhone" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-phone">
+        
+                        <label for="phone">Additional No. :</label>
+                        <input type="tel" name="phone" id="CompanyAnotherPhone"  />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-email">
+        
+                        <label for="pincode">Email Id :</label>
+                        <input type="email" name="email" id="CompanyEmail" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    <div class="form-upload-cv">
+        
+                        <label for="file">Document :</label>
+                        <!-- <input type="resumeLink" name="resumeLink" id="resumeLink" required /> -->
+                        <input type="file" name="resume_pdf" id="document_pdf" required />
+        
+                    </div>
+                    <hr class="form-divider">
+        
+                    
+        
+                </form>
+
+                <div class="form-submit ">
+                    <span class="registerBtn">
+                        <input type="submit" value="Register Me" class="submit" name="submit" id="companySubmitButton" />
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="our-partners-section text-center">
+        <div class="container">
+            <h1 class="meet-heading">- Meet Our Partners -</h1>
+            <div class="partner-img">
+                <a href="#"><i class="far fa-handshake"></i></a>
+            </div>
+            <div class="slider">
+                <button class="slider-btn prev-btn"><i class="fas fa-arrow-circle-left"></i></button>
+                <button class="slider-btn next-btn"><i class="fas fa-arrow-circle-right"></i></button>
+
+                <div class="card-slider2">
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                    <div class="partner-card">
+                        <h1>Amazon</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="our-team text-center">
+        <h1>- Meet Our Team -</h1>
+        <div class="section-our-team">
+            <div class="our-team-container flex justify-center align-center">
+                <div class="card">
+                    <div class="content">
+                        <div class="img-box">
+                            <img src="./images/Selected (1).jpg" alt="">
+                        </div>
+                        <div class="content-box">
+                            <h3>Someone Famous <br><span>Creative Designer</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="#">
+                                <i class="fab fa-facebook" aria-hidden="true">
+
+                                </i>
+                            </a>
+                        </li>
+                        <li style="--i:2">
+                            <a href=""><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                            <a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="img-box">
+                            <img src="./images/Selected (1).jpg" alt="">
+                        </div>
+                        <div class="content-box">
+                            <h3>Someone Famous <br><span>Creative Designer</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="#">
+                                <i class="fab fa-facebook" aria-hidden="true">
+
+                                </i>
+                            </a>
+                        </li>
+                        <li style="--i:2">
+                            <a href=""><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                            <a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <div class="img-box">
+                            <img src="./images/Selected (1).jpg" alt="">
+                        </div>
+                        <div class="content-box">
+                            <h3>Someone Famous <br><span>Creative Designer</span></h3>
+                        </div>
+                    </div>
+                    <ul class="sci">
+                        <li style="--i:1">
+                            <a href="#">
+                                <i class="fab fa-facebook" aria-hidden="true">
+
+                                </i>
+                            </a>
+                        </li>
+                        <li style="--i:2">
+                            <a href=""><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li style="--i:3">
+                            <a href=""><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-us" id="contactus">
+        <div class="contact-wrap">
+            <div class="contact-in">
+                <h1>Contact Info</h1>
+                <h2><a href="tel:+917888665915" target="_blank"><i class="fas fa-phone-alt"></i></a> Phone</h2>
+                <p>+917888665915</p>
+                <h2><i class="fa fa-envelope" aria-hidden="true"></i> Email</h2>
+                <p>info@democompany.com</p>
+                <h2><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h2>
+                <p>near DP dada school, Aman Nagar, Jalandhar, Punjab 144004</p>
+                <ul>
+                    <li><a href="#" ><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" ><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://api.whatsapp.com/send?phone=919041922995&forceIntent=true&load=loadInIOSExternalSafari" target="_blank" ><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+            <div class="contact-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3407.3537598213343!2d75.58220721514634!3d31.34921578142655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a5be41027da91%3A0x222cf639c43a9380!2sJOBS%20MARKET%20JALANDHAR!5e0!3m2!1sen!2sin!4v1617516037050!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container flex ">
+            <div class="box">
+                <h3>About Us</h3>
+                <p>Our mission is to unlock the career potential of all Indians . All Should be Employed</p>
+            </div>
+            <div class="box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#aboutus">About Us</a></li>
+                    <li><a href="#blog">Blogs</a></li>
+                    <li><a href="#contactus">Contact Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+            <div class="box follow">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><img src="./icons/facebook.svg" alt=""><span>Facebook</span></a></li>
+                    <li><a href="#"><img src="./icons/twitter.svg" alt=""><span>Twitter</span></a></li>
+                    <li><a href="#"><img src="./icons/google.svg" alt=""><span>Google</span></a></li>
+                    <li><a href="#"><img src="./icons/instagram.svg" alt=""><span>Instagram</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="copyright">
+        <span>Copyright © 2021 ,  All Right Reserved by Jobs Market India</span>
+    </footer>
+
+    <div class="icon-bar">
+        <a href="#" class="facebook">
+            Click Here To Visit <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="twitter">
+            Click Here To Visit <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="instagram">
+            Click Here To Visit <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="linkedin">
+            Click Here To Visit <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" class="whatsapp">
+            Click Here To Visit <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>    
+<script src="tryjava.js"></script>
+</body>
 </html>
