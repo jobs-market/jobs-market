@@ -2413,8 +2413,8 @@ footer.copyright{
         height: 300px;
     }
     section.our-team .section-our-team .our-team-container .card .content .img-box{
-        width: 90px;
-        height: 90px;
+        width: 110px;
+        height: 110px;
     }
     section.our-team .section-our-team::before{
         clip-path: circle(15% at right 100%);
