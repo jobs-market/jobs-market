@@ -1078,7 +1078,7 @@ section.review-section .review-card .review-para p{
 }
 
 .slick-slide{
-    margin: 0 17px;
+    margin: 0 14px;
 }
 
 .slick-list{
@@ -2675,3 +2675,125 @@ section.contact-us {
 
 }
 
+@media (max-width:353px){
+    section.review-section  .review-card{
+        width: 212px!important;
+        height: 310px;
+    }
+}
+
+
+section.job-upload{
+    position: relative;
+    /* width: 100%; */
+    /* min-height: 100vh; */
+    background: #342973;
+    overflow: hidden;
+}
+
+.swiper-container{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    /* height: 300px; */
+    background: var(--P);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px black;
+    filter: blur(1px);
+
+}
+.swiper-slide-active{
+    filter: blur(0px);
+}
+
+section.job-upload .job-box{
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    /* color: var(--heaven); */
+}
+
+section.job-upload .job-box .title {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    /* word-spacing: 1px; */
+    padding: 0.2rem 0.5rem;
+    line-height: 1.3;
+    font-weight: 900;
+}
+
+section.job-upload .job-box .job-qual-location{
+    padding: 0.5rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    line-height: 1.3;
+}
+
+section.job-upload .job-box .job-qual-location h4{
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+}
+
+section.job-upload .job-box .job-qual-location h5{
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+}
+
+section.job-upload .job-box .job-sal-time{
+    padding: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+section.job-upload .job-box .job-sal-time span:nth-child(1){
+    padding: 0.4rem 0;    
+}
+section.job-upload .job-box .job-sal-time span:nth-child(2){
+    padding: 0.4rem 0;    
+}
+
+section.job-upload .job-box .job-call-getjob a i{
+    font-size: 1.5rem;
+    color: #342973;
+
+}
+section.job-upload .job-box .job-call-getjob a.phone-logo{
+    margin-right: 4rem;
+}
+
+section.job-upload .job-box .job-call-getjob .job-btn{
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #342973;
+    
+    /* letter-spacing: 2px; */
+    /* word-spacing: 1px; */
+}
+section.job-upload .job-box .job-call-getjob .job-btn a{
+    color: var(--heaven);
+    text-decoration: none;
+}
+
+section.job-upload .job-box .job-social{
+    padding-top: 1.5rem;
+    padding-right: 4rem;
+    padding-left: 4rem;
+}
+
+section.job-upload .job-box .job-social a i{
+    color: #342973;
+    font-size: 0.9rem;
+}
+
+section.job-upload .job-box .job-divider{
+    border: 0.5px solid black;
+}
