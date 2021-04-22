@@ -2713,6 +2713,7 @@ section.job-upload{
 }
 
 section.job-upload .job-box{
+    text-transform: capitalize;
     position: relative;
     width: 100%;
     padding: 1rem;
